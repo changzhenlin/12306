@@ -15,13 +15,13 @@ STATION_DATES = [
 # 填入需要购买的车次(list)，"G1353"
 # 修改车次填入规则，注：(以前设置的车次逻辑不变)，如果车次填入为空，那么就是当日乘车所有车次都纳入筛选返回
 # 不填车次是整个list为空才算，如果不是为空，依然会判断车次的，这种是错误的写法 [""], 正确的写法 []
-STATION_TRAINS = ["G561"]
+STATION_TRAINS = ["C2201"]
 
 # 出发城市，比如深圳北，就填深圳就搜得到
 FROM_STATION = "北京"
 
 # 到达城市 比如深圳北，就填深圳就搜得到
-TO_STATION = "洛阳"
+TO_STATION = "天津"
 
 # 座位(list) 多个座位ex:
 # "商务座",
@@ -47,6 +47,7 @@ TICKET_PEOPLES = ["常振林"]
 # 12306登录账号
 USER = "chang1051169769"
 PWD = "chanzhe971919110"
+tk = "7gQYPfu5P_4bSyRnbHp6rsYVveHEvQcb4oxwD-cMMDSV8U9Jnxc1c0"
 
 # 加入小黑屋时间默认为5分钟，此功能为了防止僵尸票导致一直下单不成功错过正常的票
 TICKET_BLACK_LIST_TIME = 5
@@ -59,10 +60,10 @@ IS_AUTO_CODE = True
 AUTO_CODE_TYPE = 3
 
 # 此处设置云打码服务器地址，如果有自建的服务器，可以自行更改
-HOST = "captcha:80"
-# HOST = "120.77.154.140:8000"
+# HOST = "captcha:80"
+HOST = "12306.zwc365.com"
 REQ_URL = "/verify/base64/"
-HTTP_TYPE = "http"
+HTTP_TYPE = "https"
 # HOST="12306.yinaoxiong.cn" #备用服务器稳定性较差
 # REQ_URL="/verify/base64/"
 # HTTP_TYPE="https"
@@ -114,7 +115,7 @@ ORDER_MODEL = 2
 IS_PROXY = 0
 
 # 预售放票时间, 如果是捡漏模式，可以忽略此操作
-OPEN_TIME = "12:59:57"
+OPEN_TIME = "09:38:20"
 # 1=使用selenium获取devicesID
 # 2=使用网页端/otn/HttpZF/logdevice获取devicesId，这个接口的算法目前可能有点问题，如果登录一直302的请改为配置1
 # 3=自己打开浏览器在headers-Cookies中抓取RAIL_DEVICEID和RAIL_EXPIRATION，这个就不用配置selenium
@@ -127,8 +128,8 @@ CHROME_PATH = "/usr/src/app/chromedriver"
 CHROME_CHROME_PATH = "/opt/google/chrome/google-chrome"
 
 # 如果COOKIE_TYPE=3, 则需配置RAIL_EXPIRATION、RAIL_DEVICEID的值
-RAIL_EXPIRATION = ""
-RAIL_DEVICEID = ""
+RAIL_EXPIRATION = "1673114248363"
+RAIL_DEVICEID = "miuhTs9BQsWHp-raO83R25b7QZ0sj3C6yMY2Zk9GbDtvTc3af4EsG6CnGCUhDDdyMlQup5cJAoFYtZh0ZRpFiO-6fCXds3Dd0GSDryZHwjVKAQPagA-RC_V3iK_ZnqnWo7UMk1FGF0bnWGL9mGAC58rxrvD1OyTO"
 # RAIL_EXPIRATION = "1577034103293"
 # RAIL_DEVICEID = "CDno29Erc_Pf3FSXb4dzq-Op64EhWrsi5yUZKVIKR1MAfYo2qFlCeXD8VkexY7_1qg-ClV-fE8j9jgVlPZxRh3wVc2iqLe_5A8sdr62qZx4B22JPF8lFCjpgTKZ5ODW90HJd5tiQsJ1KR9nOqHRxHj1FT5LEIwfw"
 
